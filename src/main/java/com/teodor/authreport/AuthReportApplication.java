@@ -13,12 +13,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 @SpringBootApplication
 public class AuthReportApplication implements CommandLineRunner
 {
-
 	private static final Logger log = LoggerFactory.getLogger(AuthReportApplication.class);
-
-
-	@Autowired
-	JdbcTemplate jdbcTemplate;
 
 	@Autowired
 	@Qualifier("authorizationsRepository")
