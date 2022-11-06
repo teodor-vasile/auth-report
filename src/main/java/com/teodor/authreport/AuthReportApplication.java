@@ -16,7 +16,6 @@ public class AuthReportApplication implements CommandLineRunner
 	private static final Logger log = LoggerFactory.getLogger(AuthReportApplication.class);
 
 	@Autowired
-	@Qualifier("authorizationsRepository")
 	private AuthorizationsRepository authorizationsRepository;
 
 	public static void main(String[] args) {
@@ -24,6 +23,7 @@ public class AuthReportApplication implements CommandLineRunner
 	}
 
 	@Override
+	//TODO add try catch for SQL Exceptions
 	public void run(String... args) throws Exception {
 		log.info("StartApplication...");
 		countAuthorizations();
